@@ -1,6 +1,4 @@
-# React-Typescript Tailwind CSS Starter Kit - The Basics
-
-tools used
+# Tools Used
 
 - Webpack 4
 - Babel - 7
