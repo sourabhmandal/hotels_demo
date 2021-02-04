@@ -1,7 +1,7 @@
 export const packageData = [
   {
     destination: "Maldives",
-    key: 1,
+    uuid: 1,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 3,
@@ -12,7 +12,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 2,
+    uuid: 2,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 4,
@@ -23,7 +23,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 3,
+    uuid: 3,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 3,
@@ -34,7 +34,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 3,
+    uuid: 4,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 3,
@@ -45,7 +45,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 3,
+    uuid: 5,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 3,
@@ -56,7 +56,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 3,
+    uuid: 6,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 3,
@@ -67,7 +67,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 3,
+    uuid: 7,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 4,
@@ -78,7 +78,7 @@ export const packageData = [
   },
   {
     destination: "Maldives",
-    key: 3,
+    uuid: 8,
     img:
       "url(https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
     stayduration: 4,

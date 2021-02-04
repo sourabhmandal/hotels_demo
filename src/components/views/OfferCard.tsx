@@ -1,5 +1,5 @@
 import React from "react"
-
+import {Link} from 'react-router-dom'
 interface OfferProps {
   img: string
   destination: string
@@ -8,14 +8,15 @@ interface OfferProps {
   traveldate: string
   totalpayment: number
   initialpayment: number
-  key: number
+  uuid: number
 }
 
 const OfferCard: React.FC<OfferProps> = (props): JSX.Element => (
-  <div className="w-full " key={props.key}>
+  <Link to={`/${props.uuid}`}>
+    <div className="m-2 ">
     <div
       className="bg-white shadow-xl rounded-lg overflow-hidden border border-gray-400"
-      style={{ borderTop: "1px solid dashed" }}
+      
     >
       <div
         className="bg-cover bg-center h-56 w-68 "
@@ -68,6 +69,7 @@ const OfferCard: React.FC<OfferProps> = (props): JSX.Element => (
       </div>
     </div>
   </div>
+  </Link>
 )
 
 export default OfferCard

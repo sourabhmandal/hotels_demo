@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import TopCard from "../views/TopCard"
 import OfferCard from "../views/OfferCard"
 import Breadcrum from "../views/Breadcrum"
@@ -14,7 +14,7 @@ type OfferProps = {
   traveldate: string
   totalpayment: number
   initialpayment: number
-  key: number
+  uuid: number
 }
 
 const Dashboard: React.FC<OfferProps> = (): JSX.Element => {
@@ -45,11 +45,13 @@ const Dashboard: React.FC<OfferProps> = (): JSX.Element => {
     packageData.map((e) => {
       console.log(e.initialpayment)
     })
-    setLogoDirection((prev: number) => {
+    setLogoDirection((prev: number):number => {
       if (prev === 0) {
-        setLogoDirection(1)
+        setLogoDirection(1);
+        return 0
       } else {
         setLogoDirection(0)
+        return 0
       }
     })
     return 0
@@ -102,13 +104,14 @@ const Dashboard: React.FC<OfferProps> = (): JSX.Element => {
           return (
             <OfferCard
               img={p.img}
-              key={p.key}
+              uuid={p.uuid}
               destination={p.destination}
               stayduration={p.stayduration}
               stayhotel={p.stayhotel}
               traveldate={p.traveldate}
               initialpayment={p.initialpayment}
               totalpayment={p.totalpayment}
+              key={p.uuid}
             />
           )
         })}

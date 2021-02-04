@@ -1,21 +1,26 @@
 import React from "react"
-import Header from "./header"
-import Footer from "./footer"
+import { BrowserRouter as Router, Route,  Switch  } from "react-router-dom"
+import PackageDetail from "Container/PackageDetail"
+import Dashboard from "Container/Dashboard"
+import NoMatch from "Views/NoMatch"
 
-type ShellProps = {
-  header?: React.ReactNode
-  footer?: React.ReactNode
-}
-const Shell: React.FC<ShellProps> = ({
-  children,
-  header,
-  footer,
-}) => {
+import Header from "../containers/Header"
+import Footer from "../containers/Footer"
+
+
+const Shell: React.FC = () => {
   return (
     <div className="bg-gray-100">
-      <Header>{header && header}</Header>
-      <div className="min-h-screen">{children}</div>
-      <Footer>{footer && footer}</Footer>
+      
+      <Router >
+        <Header/>
+        <Switch>
+          <Route exact path="/" component={Dashboard}/>
+          <Route path="/:id" component={PackageDetail}/>
+          <Route  component={NoMatch}/>
+          </Switch>
+        <Footer/>
+      </Router>
     </div>
   )
 }

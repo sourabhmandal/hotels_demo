@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     setBurgerClicked(!burgerClicked)
   }
   return (
-    <>
+    <div className="flex">
       <div id="logo" className="flex-1 flex items-center text-2xl">
         {" "}
         <Link to="/" className="flex flex-1 items-center">
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
       </div>
-    </>
+    </div>
   )
 }
 
