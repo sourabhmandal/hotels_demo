@@ -276,7 +276,7 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
             <Slider className="flex">
               {packageData.map((p: OfferProps) => {
                 return (
-                  <Slide index={p.uuid} key={p.uuid+p.stayduration} >
+                  <Slide index={p.uuid} key={p.uuid+p.stayduration} className="h-24">
                       <OfferCard
                       img={p.img}
                       uuid={p.uuid}
