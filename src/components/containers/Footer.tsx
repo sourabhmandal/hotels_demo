@@ -5,7 +5,7 @@ import FooterCols from "Views/FooterCols"
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="bg-black pt-12 pl-24">
+      <div className="bg-black pt-12 pl-24 grid grid-cols-6">
         <FooterPackages />
         <FooterPackages />
         <FooterPackages />

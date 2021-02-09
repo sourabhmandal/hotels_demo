@@ -165,11 +165,12 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
         <ul className="grid grid-cols-6 gap-4 mt-5"> 
         {imgdata.map( (p:string)=>{
             return (
-              <div className="col-span-3 md:col-span-3 lg:col-span-1 flex">
+              <div className="col-span-6 md:col-span-3 lg:col-span-1 mx-3 md:mx-1 flex">
                 <li>
-              <img src={p} className="h-full w-full mx-2  rounded-lg"/>
-            </li>
-            </div>)
+                  <img src={p} className="h-full w-full rounded-lg"/>
+                </li>
+                </div>
+            )
           })}
           
         </ul>
