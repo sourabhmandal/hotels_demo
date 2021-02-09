@@ -34,8 +34,9 @@ const PackageDetail: React.FC<IProps> = ( props ):JSX.Element => {
   
   return (
     
-    <div className="m-8 grid grid-cols-8 gap-x-6 gap-y-10 lg:gap-x-6 lg:gap-y-10">
-      <div className=" ml-8 col-span-5">      
+    <div className="m-1 sm:m-4 md:m-8 grid grid-cols-8 gap-x-1 gap-y-1 lg:gap-x-6 lg:gap-y-10">
+
+        <div className="ml-1 md:ml-8 col-span-8 lg:col-span-5">      
         <Carosel step={1} slidenos={imgdata.length}>
             <Slider className="flex">
               {imgdata.map((p: string) => {
@@ -46,7 +47,9 @@ const PackageDetail: React.FC<IProps> = ( props ):JSX.Element => {
             </Slider>
         </Carosel>
 
-        <span className=" shadow-lg w-full justify-center flex bg-gray-100 border border-gray-300 rounded-lg">
+
+        
+        <span className=" shadow-lg w-full justify-center flex flex-col md:flex-row bg-gray-100 border border-gray-300 rounded-lg">
           <span className="p-3 font-bold">Overview</span>
           <span className="p-3 font-bold">Inclusion</span>
           <span className="p-3 font-bold">Resort</span>
@@ -69,19 +72,18 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
           Book this deal at the best price now!
         </p>
 
-        <div className="flex space-x-4">
-          <div className="p-3 max-w-sm bg-gray-200 rounded-xl flex flex-1 rounded-lg items-center space-x-4">
-            <div className="flex-shrink-0 h-12 w-12 rounded-full bg-yellow-400">
-            </div>
-            <div>
-              <div className=" font-bold text-black">Date Change Flexibility</div>
+        <div className="grid grid-cols-2 gap-4 sm:gap-1">
+          <div className="col-span-2 md:col-span-1 p-3 max-w-sm bg-gray-200 flex flex-1 rounded-lg items-center">
+            <div className="flex-shrink-0 h-12 w-12 rounded-full bg-yellow-400"></div>
+            <div className="pl-2">
+              <div className="font-bold text-black">Date Change Flexibility</div>
               <p className="text-gray-600 text-sm">Travel date cannot be changed once booked</p>
             </div>
           </div>
-          <div className="p-3 max-w-sm bg-gray-200 rounded-xl flex  flex-1 rounded-lg items-center space-x-4">
+          <div className="col-span-2 md:col-span-1 p-3 max-w-sm bg-gray-200 flex flex-1 rounded-lg items-center">
             <div className="flex-shrink-0 h-12 w-12 rounded-full bg-yellow-400">
             </div>
-            <div>
+            <div  className="pl-2">
               <div className=" font-bold text-black">Date Change Flexibility</div>
               <p className="text-gray-600 text-sm">Travel date cannot be changed once booked</p>
             </div>
@@ -160,28 +162,35 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
         <a href="#" className="capitalize pb-2 my-2 border-b-2 font-bold text-sm border-black">coco bodhi resort</a>
         
 
-        <ul className="flex mt-5"> 
-          {imgdata.map( (p:string)=>{
-            return (<li>
-              <img src={p} className="h-24 w-24 mx-2  rounded-lg"/>
-            </li>)
+        <ul className="grid grid-cols-6 gap-4 mt-5"> 
+        {imgdata.map( (p:string)=>{
+            return (
+              <div className="col-span-3 md:col-span-3 lg:col-span-1 flex">
+                <li>
+              <img src={p} className="h-full w-full mx-2  rounded-lg"/>
+            </li>
+            </div>)
           })}
+          
         </ul>
 
         <h2 className="font-bold text-2xl py-5">Amenities</h2>
 
-        <div className="grid grid-cols-2">
-          <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
-          <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
-          <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
-          
-          <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+        <div className="grid grid-cols-2 flex">
+        <div className="col-span-2 sm:col-span-1">
           <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
           <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
           <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
           <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
           <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
-          <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+        </div>
+          <div className="col-span-2 sm:col-span-1">
+            <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+            <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+            <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+            <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+            <span className="flex"><img className="h-5 w-5 mx-1" src={around}/><p>Concierge Service</p></span>
+          </div>
           
         </div>
 
@@ -240,8 +249,8 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
         <p className="text-sm">*Subject to cancellation policy</p>
       </div>
       
-      <div className="mx-4 col-span-3">
-        <div className="border border-grey-700 rounded-lg mx-5">
+      <div className="col-span-8 lg:col-span-3">
+        <div className="border border-grey-700 rounded-lg">
           <h1 className="bg-yellow-500 text-center py-2 rounded-t-lg">Offer ends in 2 days</h1>
           <h1 className="bg-yellow-400 text-center py-2">Travel anytime till April 27, 2021.</h1>
           <a href="#" className="text-center text-sm text-sm p-32"><span className=" text-gray-500">Conditions Apply</span></a>
