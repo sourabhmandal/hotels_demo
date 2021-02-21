@@ -5,6 +5,9 @@ import OfferCard from "Views/OfferCard";
 import {packageData} from "../../DataBase/packages";
 import {Slide, ButtonBack, ButtonNext, Slider} from 'pure-react-carousel'
 import around from "../../assets/around.png";
+import DatePicker from "react-datePicker"
+import 'react-datepicker/dist/react-datepicker.css'
+
 interface IProps extends RouteComponentProps<{id: string}> {}
   
 type OfferProps = {
@@ -31,7 +34,7 @@ const PackageDetail: React.FC<IProps> = ( props ):JSX.Element => {
       "https://images.unsplash.com/photo-1611589442438-ab9c80d4cea2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "https://images.unsplash.com/photo-1611589442438-ab9c80d4cea2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
     ]);
-  
+    const [selectedDate, setselectedDate] = useState(new Date())
   return (
     
     <div className="m-1 sm:m-4 md:m-8 grid grid-cols-8 gap-x-1 gap-y-1 lg:gap-x-6 lg:gap-y-10">
@@ -169,7 +172,7 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
                 <li>
                   <img src={p} className="h-full w-full rounded-lg"/>
                 </li>
-                </div>
+              </div>
             )
           })}
           
@@ -256,15 +259,24 @@ Due to the Covid-19 guidelines given by MHA, access to Swimming pools, Spa and c
           <h1 className="bg-yellow-400 text-center py-2">Travel anytime till April 27, 2021.</h1>
           <a href="#" className="text-center text-sm text-sm p-32"><span className=" text-gray-500">Conditions Apply</span></a>
           <div className="mx-5">
-          <p className="px-4 py-3 text-sm bg-gray-200 rounded-lg my-4">04/Feb/2021</p>
-          <p className="px-4 py-3 text-sm bg-gray-200 rounded-lg my-4">2 adults, 1 room</p>
-          
+            <DatePicker className="px-4 py-3 text-sm bg-gray-200 rounded-lg my-4" showYearDropdown showMonthYearDropdown minDate={new Date()} selected={selectedDate} onChange={date => setselectedDate(date)}/>
+            <div className="flex">
+              <div>
+                <label>Number of Passangers</label>
+                <input type="number" min="1" placeholder="2" className="px-4 py-3 text-sm bg-gray-200 rounded-lg mb-4"/>
+              </div>
+              <div>
+                <label>Number of Rooms</label>
+                <input type="number" min="1" placeholder="1" className="px-4 py-3 text-sm bg-gray-200 rounded-lg mb-4"/>
+              </div>
+            </div>
 
-          <p className="text-sm text-gray-500">Total Price</p>
-          <p className="font-bold text-xl mb-3">₹ 2,41,940*</p>
-          <p className="text-sm text-gray-500">Initial amount (15%)</p>
-          <p className="font-bold text-xl mb-3">₹ 36,291</p>
-          <button className="py-5 bg-green-400 font-bold px-5 text-lg text-center w-full rounded-lg text-white">Submit</button></div>
+            <p className="text-sm text-gray-500">Total Price</p>
+            <p className="font-bold text-xl mb-3">₹ 2,41,940*</p>
+            <p className="text-sm text-gray-500">Initial amount (15%)</p>
+            <p className="font-bold text-xl mb-3">₹ 36,291</p>
+            <button className="py-5 bg-green-400 font-bold px-5 text-lg text-center w-full rounded-lg text-white">Submit</button>
+          </div>
           <p className="text-red-700 text-xs text-center mb-3 font-bold">* Remaining amount must be paid 30 days before check-in</p>
         </div>
       </div>
